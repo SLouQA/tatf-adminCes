@@ -15,9 +15,9 @@ public class LoguinPO {
 
     public void ingresarInSes(){this.browser.find().link("Iniciar sesión").click();}
 
-    public void btnRetClick(){this.browser.find().id("return").click();}
-
     public void btnInSesClick(){this.browser.find().xpath("//*[@id=\'formLogin\']/div[3]/div[2]/button").click();}
+
+    public void btnRetClick(){this.browser.find().id("return").click();}
 
     public void btnOlvContraseniaClick(){this.browser.find().link("Olvide mi contraseña").click();}
 

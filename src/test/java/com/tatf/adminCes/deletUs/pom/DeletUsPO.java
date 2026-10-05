@@ -12,5 +12,4 @@ public class DeletUsPO {
 
     public void deletClick(Element fila){fila.xpath(".//button").click();}
 
-
 }

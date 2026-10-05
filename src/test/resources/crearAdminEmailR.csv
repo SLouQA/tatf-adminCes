@@ -1,0 +1,3 @@
+nombre;apellido;email;contrasenia;pais;nombreD;apellidoD;emailR;contraseniaD;paisR
+Nombre Prueba;Apellido Prueba;crear.admin@yopmail.com;as123;Uruguay;Solo Email;Repetido;crear.admin@yopmail.com;as1234;Argentina
+Nombre Prueba;Apellido Prueba;crear.admin@yopmail.com;as123;Uruguay;Nombre Prueba;Apellido Prueba;crear.admin@yopmail.com;as1234;Uruguay

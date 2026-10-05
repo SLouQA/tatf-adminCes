@@ -12,7 +12,7 @@ public class IngresoPO {
 
     public void ingresarUrl(){this.browser.interaction().navigateTo(URL);}
 
-    public void ingresarPass(){this.browser.find().id("pass").write(URL_CONTRASENIA);}
+    public void ingresarPass(){this.browser.find().id("pass").write(PASS_URL);}
 
     public String getTitle(){
         return this.browser.find().xpath("//p[text()='" + TITULO +"']").getText();}

@@ -16,7 +16,7 @@ public class BaseTest {
     }
 
     @BeforeEach
-    void ingresarAlSitio() {
+    void configuration() {
         browser = BrowserFactory.getBrowser(true);
         IngresoTask ingresoTask = new IngresoTask(browser);
         String tituloObtenido = ingresoTask.enterToSystem();
@@ -33,4 +33,3 @@ public class BaseTest {
         System.out.println("Fin de la suite de tests");
     }
 }
-

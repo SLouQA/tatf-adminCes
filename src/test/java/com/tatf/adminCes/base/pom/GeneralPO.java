@@ -14,6 +14,4 @@ public class GeneralPO {
         return this.browser.find().id("swal2-html-container").getText();}
 
     public void okClick(){this.browser.find().className("swal2-confirm").click();}
-
-
 }

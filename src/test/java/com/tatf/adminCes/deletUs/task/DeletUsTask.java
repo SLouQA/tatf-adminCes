@@ -14,8 +14,8 @@ public class DeletUsTask {
         this.verify = IVerify.create();
     }
 
-    public void verifyConfDelet(String textoObtenido) {
-        verify.verify(textoObtenido, MSJ_CONF_ELIM_USUARIO, "Conf al eliminar");
+    public void verifyConfDelet(String textoObtenido, String email) {
+        verify.verify(textoObtenido, MSJ_CONF_ELIM_US_PREF+ email+MSJ_CONF_ELIM_US_FIN, "Conf al eliminar");
     }
 
     public void verifyDeletOk(String textoObtenido) {

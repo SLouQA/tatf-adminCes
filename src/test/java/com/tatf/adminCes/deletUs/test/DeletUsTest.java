@@ -9,15 +9,20 @@ import com.tatf.adminCes.login.task.LoguinTask;
 import com.tatf.adminCes.viewUs.pom.ViewUsPO;
 import com.tatf.adminCes.viewUs.task.ViewUsTask;
 import com.tatf.core.element.Element;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static com.tatf.adminCes.login.data.LoguinData.*;
-import static com.tatf.adminCes.viewUs.data.ViewUsData.*;
 
 public class DeletUsTest extends BaseTest {
 
-    @Test
-    void eliminarCuentaTester () {
+    @ParameterizedTest(name = "{arguments}")
+    @CsvFileSource(
+            resources = "/deletUs.csv",
+            useHeadersInDisplayName = true,
+            delimiter = ';'
+    )
+    void eliminarCuentaTester(String nombre, String apellido, String email,String rol,String validEmail, String validRol) {
         LoguinPO loguinPO = new LoguinPO(browser);
         LoguinTask loguinTask = new LoguinTask(browser);
         GeneralPO generalPO = new GeneralPO(browser);
@@ -26,25 +31,22 @@ public class DeletUsTest extends BaseTest {
         DeletUsPO deletUsPO = new DeletUsPO(browser);
         DeletUsTask deletUsTask = new DeletUsTask(browser);
 
-
-
         loguinPO.ingresarInSes();
         loguinTask.loguinAdmin(EMAIL, CONTRASENIA);
 
         String textoObtenidoLogin = generalPO.getMsjModal();
         loguinTask.verifyLoguinAdminOk(textoObtenidoLogin);
-
         generalPO.okClick();
 
         viewUsPO.ingresarViewUs();
-        Element fila = viewUsTask.buscarFila(EXIST_NOMBRE, EXIST_APELLIDO, EXIST_EMAIL, EXIST_ROL);
+        Element fila = viewUsTask.buscarFila(nombre, apellido, email, rol);
         viewUsTask.verifyUsExist(fila);
 
         assert fila != null;
         deletUsPO.deletClick(fila);
 
         String textoConfDelet = generalPO.getMsjModal();
-        deletUsTask.verifyConfDelet(textoConfDelet);
+        deletUsTask.verifyConfDelet(textoConfDelet, email);
 
         generalPO.okClick();
 
@@ -53,8 +55,8 @@ public class DeletUsTest extends BaseTest {
 
         generalPO.okClick();
 
-        Element filaEliminada = viewUsTask.buscarFila(EXIST_NOMBRE, EXIST_APELLIDO, EXIST_EMAIL, EXIST_ROL);
+        Element filaEliminada = viewUsTask.buscarFila(nombre, apellido, validEmail, validRol);
         viewUsTask.verifyUsNotExist(filaEliminada);
-
     }
+
 }

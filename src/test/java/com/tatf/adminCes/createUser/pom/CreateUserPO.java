@@ -2,12 +2,16 @@ package com.tatf.adminCes.createUser.pom;
 
 import com.tatf.core.browser.IBrowser;
 
-public class CreateAdminPO {
+public class CreateUserPO {
     private final IBrowser browser;
 
-    public CreateAdminPO(IBrowser browser) {
+    public CreateUserPO(IBrowser browser) {
         this.browser = browser;
     }
+
+    public void ingresarRegTester(){this.browser.find().link("Crear usuario").click();}
+
+    public void ingresarRol(String idRol){this.browser.find().id(idRol).click();}
 
     public void ingresarRegistrarse(){this.browser.find().link("Registrarse").click();}
 

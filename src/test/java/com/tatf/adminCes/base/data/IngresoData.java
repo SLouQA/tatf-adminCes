@@ -1,8 +1,13 @@
 package com.tatf.adminCes.base.data;
 
+import com.tatf.core.util.ConfigReader;
+
 public class IngresoData {
-    public static String URL = "http://cestore.ces.com.uy/adminces/";
-    public static String URL_CONTRASENIA = "3)ea60e0be3ba12c6ecd%7297868%5c4";
+    private static final ConfigReader config = new ConfigReader("config.properties");
+
+    public static final String URL = config.asString("adminces.url");
+    public static final String PASS_URL = config.asString("adminces.passUrl");
+
     public static String TITULO = "Taller de Automatización del Testing Funcional";
 
 }

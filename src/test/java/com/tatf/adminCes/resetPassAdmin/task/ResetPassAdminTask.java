@@ -17,15 +17,32 @@ public class ResetPassAdminTask {
         this.verify = IVerify.create();
     }
 
-    public void resetContraseniaAdmin(String email, String nuevaContrasenia) {
+    public void resetContraseniaAdmin(String email, String nuevaCont, String nuevaContDos) {
         resetPassAdminPO.ingresarResetPassAdmin();
         resetPassAdminPO.ingresarEmail(email);
-        resetPassAdminPO.ingresarContrasenia(nuevaContrasenia);
-        resetPassAdminPO.ingresarRepeatContrasenia(nuevaContrasenia);
+        resetPassAdminPO.ingresarContrasenia(nuevaCont);
+        resetPassAdminPO.ingresarRepeatContrasenia(nuevaContDos);
         resetPassAdminPO.btnReset();
     }
 
-    public void verifyResetOk(String tituloObtenido) {
-        verify.verify(tituloObtenido, MSJ_RESET_CONTRASENIA, "Contraseña reiniciada OK");
+    public void verifyResetAdminOk(String tituloObtenido) {
+        verify.verify(tituloObtenido, MSJ_RESET_CONTRASENIA, "Contraseña reiniciada OK.");
     }
+
+    public void verifyResetFormVacio(String tituloObtenido) {
+        verify.verify(tituloObtenido, MSJ_RESET_CONT_VACIO, "Form vacio.");
+    }
+
+    public void verifyResetUsNoExiste(String tituloObtenido) {
+        verify.verify(tituloObtenido, MSJ_RESET_US_NOTEXIST, "Ususario no existe.");
+    }
+
+    public void verifyResetUsNoAdmin(String tituloObtenido) {
+        verify.verify(tituloObtenido, MSJ_RESET_US_NOADMIN, "Usuario no admin.");
+    }
+
+    public void verifyResetPassNoIgual(String tituloObtenido) {
+        verify.verify(tituloObtenido, MSJ_RESET_CONT_NOCOINCIDE, "Las contraseñas no coinciden.");
+    }
+
 }

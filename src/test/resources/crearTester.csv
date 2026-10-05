@@ -1,0 +1,4 @@
+nombre;apellido;email;contrasenia;pais;idRol;textoRol
+Nombre Senior;Apellido Senior;tester.senior@yopmail.com;as123;Uruguay;testerSenior;Tester Senior
+Nombre Junior;Apellido Junior;tester.junior@yopmail.com;as123;Uruguay;testerJunior;Tester Junior
+Nombre Lead;Apellido Lead;tester.lead@yopmail.com;as123;Uruguay;testerLead;Tester Lider
