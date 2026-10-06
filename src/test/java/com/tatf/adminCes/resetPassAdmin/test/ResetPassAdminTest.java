@@ -1,13 +1,15 @@
 package com.tatf.adminCes.resetPassAdmin.test;
 
+import com.tatf.adminCes.base.task.GeneralTask;
 import com.tatf.adminCes.base.test.BaseTest;
-import com.tatf.adminCes.base.pom.GeneralPO;
 import com.tatf.adminCes.login.task.LoguinTask;
-import com.tatf.adminCes.resetPassAdmin.pom.ResetPassAdminPO;
 import com.tatf.adminCes.resetPassAdmin.task.ResetPassAdminTask;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+
+import static com.tatf.adminCes.login.data.LoguinData.MSJ_SESION_OK;
+import static com.tatf.adminCes.resetPassAdmin.data.ResetPassAdminData.*;
 
 
 public class ResetPassAdminTest extends BaseTest {
@@ -19,25 +21,17 @@ public class ResetPassAdminTest extends BaseTest {
             delimiter = ';'
     )
     void resetPassAdminOk(String email, String contrasenia, String repCont ) {
-        ResetPassAdminPO resetPassAdminPO = new ResetPassAdminPO(browser);
         ResetPassAdminTask resetPassAdminTask = new ResetPassAdminTask(browser);
-        GeneralPO generalPO = new GeneralPO(browser);
+        GeneralTask generalTask = new GeneralTask(browser);
         LoguinTask loguinTask = new LoguinTask(browser);
 
-        resetPassAdminPO.ingresarResetPassAdmin();
         resetPassAdminTask.resetContraseniaAdmin(email, contrasenia, repCont);
-
-        String textoObtenidoModal = generalPO.getMsjModal();
-        resetPassAdminTask.verifyResetAdminOk(textoObtenidoModal);
-
-        generalPO.okClick();
+        verify.verify(MSJ_RESET_CONTRASENIA, generalTask.obtenerMsjModal(), "Contraseña reiniciada OK");
+        generalTask.confirmarModal();
 
         loguinTask.loguinAdmin(email, contrasenia);
-
-        String textoObtenidoVerify = generalPO.getMsjModal();
-        loguinTask.verifyLoguinAdminOk(textoObtenidoVerify);
-
-        generalPO.okClick();
+        verify.verify(MSJ_SESION_OK, generalTask.obtenerMsjModal(), "Inicio de sesión con la nueva contraseña");
+        generalTask.confirmarModal();
     }
     @ParameterizedTest(name = "{arguments}")
     @CsvFileSource(
@@ -46,16 +40,13 @@ public class ResetPassAdminTest extends BaseTest {
             delimiter = ';'
     )
     void resetPassNoAdmin(String email, String contrasenia, String repCont ) {
-        ResetPassAdminPO resetPassAdminPO = new ResetPassAdminPO(browser);
         ResetPassAdminTask resetPassAdminTask = new ResetPassAdminTask(browser);
-        GeneralPO generalPO = new GeneralPO(browser);
+        GeneralTask generalTask = new GeneralTask(browser);
 
-        resetPassAdminPO.ingresarResetPassAdmin();
         resetPassAdminTask.resetContraseniaAdmin(email, contrasenia, repCont);
 
-        String textoObtenidoModal = generalPO.getMsjModal();
-        resetPassAdminTask.verifyResetUsNoAdmin(textoObtenidoModal);
-        generalPO.okClick();
+        verify.verify(MSJ_RESET_US_NOADMIN, generalTask.obtenerMsjModal(), "Usuario no admin");
+        generalTask.confirmarModal();
     }
 
     @ParameterizedTest(name = "{arguments}")
@@ -65,16 +56,12 @@ public class ResetPassAdminTest extends BaseTest {
             delimiter = ';'
     )
     void resetPassNoIgual(String email, String contrasenia, String repCont ) {
-        ResetPassAdminPO resetPassAdminPO = new ResetPassAdminPO(browser);
         ResetPassAdminTask resetPassAdminTask = new ResetPassAdminTask(browser);
-        GeneralPO generalPO = new GeneralPO(browser);
+        GeneralTask generalTask = new GeneralTask(browser);
 
-        resetPassAdminPO.ingresarResetPassAdmin();
         resetPassAdminTask.resetContraseniaAdmin(email, contrasenia, repCont);
-
-        String textoObtenidoModal = generalPO.getMsjModal();
-        resetPassAdminTask.verifyResetPassNoIgual(textoObtenidoModal);
-        generalPO.okClick();
+        verify.verify(MSJ_RESET_CONT_NOCOINCIDE, generalTask.obtenerMsjModal(), "Las contraseñas no coinciden");
+        generalTask.confirmarModal();
     }
     @ParameterizedTest(name = "{arguments}")
     @CsvFileSource(
@@ -83,29 +70,21 @@ public class ResetPassAdminTest extends BaseTest {
             delimiter = ';'
     )
     void resetFormVacio(String email, String contrasenia, String repCont ) {
-        ResetPassAdminPO resetPassAdminPO = new ResetPassAdminPO(browser);
         ResetPassAdminTask resetPassAdminTask = new ResetPassAdminTask(browser);
-        GeneralPO generalPO = new GeneralPO(browser);
+        GeneralTask generalTask = new GeneralTask(browser);
 
-        resetPassAdminPO.ingresarResetPassAdmin();
         resetPassAdminTask.resetContraseniaAdmin(email, contrasenia, repCont);
-
-        String textoObtenidoModal = generalPO.getMsjModal();
-        resetPassAdminTask.verifyResetFormVacio(textoObtenidoModal);
-        generalPO.okClick();
+        verify.verify(MSJ_RESET_CONT_VACIO, generalTask.obtenerMsjModal(), "Formulario vacío");
+        generalTask.confirmarModal();
     }
     @Test
     void resetUsNoExiste() {
-        ResetPassAdminPO resetPassAdminPO = new ResetPassAdminPO(browser);
         ResetPassAdminTask resetPassAdminTask = new ResetPassAdminTask(browser);
-        GeneralPO generalPO = new GeneralPO(browser);
+        GeneralTask generalTask = new GeneralTask(browser);
 
-        resetPassAdminPO.ingresarResetPassAdmin();
-        resetPassAdminTask.resetContraseniaAdmin("prueba@yopmail.com", "213", "213");
-
-        String textoObtenidoModal = generalPO.getMsjModal();
-        resetPassAdminTask.verifyResetUsNoExiste(textoObtenidoModal);
-        generalPO.okClick();
+        resetPassAdminTask.resetContraseniaAdmin(EMAIL_NO_EXISTE, CONT_NO_EXISTE, CONT_NO_EXISTE);
+        verify.verify(MSJ_RESET_US_NOTEXIST, generalTask.obtenerMsjModal(), "Usuario no existe");
+        generalTask.confirmarModal();
     }
 
 }

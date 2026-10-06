@@ -1,17 +1,16 @@
 package com.tatf.adminCes.deletUs.test;
 
+import com.tatf.adminCes.base.task.GeneralTask;
 import com.tatf.adminCes.base.test.BaseTest;
-import com.tatf.adminCes.base.pom.GeneralPO;
-import com.tatf.adminCes.deletUs.pom.DeletUsPO;
 import com.tatf.adminCes.deletUs.task.DeletUsTask;
-import com.tatf.adminCes.login.pom.LoguinPO;
 import com.tatf.adminCes.login.task.LoguinTask;
-import com.tatf.adminCes.viewUs.pom.ViewUsPO;
+
 import com.tatf.adminCes.viewUs.task.ViewUsTask;
 import com.tatf.core.element.Element;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
+import static com.tatf.adminCes.deletUs.data.DeletUsData.*;
 import static com.tatf.adminCes.login.data.LoguinData.*;
 
 public class DeletUsTest extends BaseTest {
@@ -23,40 +22,32 @@ public class DeletUsTest extends BaseTest {
             delimiter = ';'
     )
     void eliminarCuentaTester(String nombre, String apellido, String email,String rol,String validEmail, String validRol) {
-        LoguinPO loguinPO = new LoguinPO(browser);
         LoguinTask loguinTask = new LoguinTask(browser);
-        GeneralPO generalPO = new GeneralPO(browser);
-        ViewUsPO viewUsPO = new ViewUsPO(browser);
         ViewUsTask viewUsTask = new ViewUsTask(browser);
-        DeletUsPO deletUsPO = new DeletUsPO(browser);
         DeletUsTask deletUsTask = new DeletUsTask(browser);
+        GeneralTask generalTask = new GeneralTask(browser);
 
-        loguinPO.ingresarInSes();
+
         loguinTask.loguinAdmin(EMAIL, CONTRASENIA);
+        verify.verify(MSJ_SESION_OK, generalTask.obtenerMsjModal(), "Sesión de admin iniciada");
+        generalTask.confirmarModal();
 
-        String textoObtenidoLogin = generalPO.getMsjModal();
-        loguinTask.verifyLoguinAdminOk(textoObtenidoLogin);
-        generalPO.okClick();
-
-        viewUsPO.ingresarViewUs();
+        viewUsTask.ingresarViewUs();
         Element fila = viewUsTask.buscarFila(nombre, apellido, email, rol);
-        viewUsTask.verifyUsExist(fila);
+        verify.verifyNotNull(fila, "El usuario a eliminar existe en la tabla");
 
-        assert fila != null;
-        deletUsPO.deletClick(fila);
 
-        String textoConfDelet = generalPO.getMsjModal();
-        deletUsTask.verifyConfDelet(textoConfDelet, email);
+        deletUsTask.eliminarUsuario(fila);
 
-        generalPO.okClick();
+        verify.verify(MSJ_CONF_ELIM_US_PREF + email + MSJ_CONF_ELIM_US_FIN, generalTask.obtenerMsjModal(), "Mensaje de confirmación al eliminar");
+        generalTask.confirmarModal();
 
-        String textoObtenidoDelet = generalPO.getMsjModal();
-        deletUsTask.verifyDeletOk(textoObtenidoDelet);
 
-        generalPO.okClick();
+        verify.verify(MSJ_ELIM_USUARIO, generalTask.obtenerMsjModal(), "Usuario eliminado");
+        generalTask.confirmarModal();
 
         Element filaEliminada = viewUsTask.buscarFila(nombre, apellido, validEmail, validRol);
-        viewUsTask.verifyUsNotExist(filaEliminada);
+        verify.verifyNull(filaEliminada, "El usuario ya no aparece en la tabla");
     }
 
 }

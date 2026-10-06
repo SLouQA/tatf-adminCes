@@ -1,7 +1,6 @@
 package com.tatf.adminCes.base.pom;
 import com.tatf.core.browser.IBrowser;
 
-import static com.tatf.adminCes.base.data.IngresoData.*;
 
 public class IngresoPO {
     private final IBrowser browser;
@@ -10,12 +9,12 @@ public class IngresoPO {
         this.browser = browser;
     }
 
-    public void ingresarUrl(){this.browser.interaction().navigateTo(URL);}
+    public void ingresarUrl(String url){this.browser.interaction().navigateTo(url);}
 
-    public void ingresarPass(){this.browser.find().id("pass").write(PASS_URL);}
-
-    public String getTitle(){
-        return this.browser.find().xpath("//p[text()='" + TITULO +"']").getText();}
+    public void ingresarPass(String pass){this.browser.find().id("pass").write(pass);}
 
     public void ingresarClick() {this.browser.find().className("btn-primary").click();}
+
+    public String getTitle(String titulo){
+        return this.browser.find().xpath("//p[text()='" + titulo +"']").getText();}
 }

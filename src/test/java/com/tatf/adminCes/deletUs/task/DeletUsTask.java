@@ -1,24 +1,20 @@
 package com.tatf.adminCes.deletUs.task;
 
+import com.tatf.adminCes.deletUs.pom.DeletUsPO;
 import com.tatf.core.browser.IBrowser;
-import com.tatf.core.verification.IVerify;
+import com.tatf.core.element.Element;
 
-import static com.tatf.adminCes.deletUs.data.DeletUsData.*;
+
 
 public class DeletUsTask {
-    private final IBrowser browser;
-    private final IVerify verify;
+    private final DeletUsPO deletUsPO;
 
     public DeletUsTask(IBrowser browser) {
-        this.browser = browser;
-        this.verify = IVerify.create();
+        this.deletUsPO = new DeletUsPO(browser);
     }
 
-    public void verifyConfDelet(String textoObtenido, String email) {
-        verify.verify(textoObtenido, MSJ_CONF_ELIM_US_PREF+ email+MSJ_CONF_ELIM_US_FIN, "Conf al eliminar");
+    public void eliminarUsuario(Element fila) {
+        deletUsPO.deletClick(fila);
     }
 
-    public void verifyDeletOk(String textoObtenido) {
-        verify.verify(textoObtenido, MSJ_ELIM_USUARIO, "Usuario eliminado");
-    }
 }
