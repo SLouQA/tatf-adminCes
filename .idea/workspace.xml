@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aeee7eb9-6309-484b-b8e3-ab896baa63b5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/688bccb3ddd1e833f2bce1b13235aacaa42b6b4f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6aa8d9103356ee69b9d817276289f84180a2405b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/963a089f79b0ef06d7bc658fae9d806a10c6bf1f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/4/a45021fdfc573ea7bf05417f94c41ff6dd08552c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/ab7d6a83bea08d37880c9286d5aad10feb7a96fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b0bbdc358be0657e62d5403c89e1141819a3141a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cb7799e2722425ac67bc4a9288dbf5b0eb56a636" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d19db2edc93e8e8fb1bf747581a2cf99349ae228" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df9c54218992109688a53ce0c5b97bbb42ab410c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/2/02116cfa1cf4f35bd547f43c0283967689d6a60c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/f/1f450370607a3242fb8d9d486cab78ff72fd832b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/8/688bccb3ddd1e833f2bce1b13235aacaa42b6b4f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid9448.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid9448.log" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3JTYITLph8vVkXHBrJGitnP80zA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.CreateAdminTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateAdminTest and 1 more.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateAdminTest.crearCuentaAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateAdminTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreateTesterTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DeletUsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrimerosScripts1.crearCuentaAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrimerosScripts1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ResetPassAdminTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SuiteCrearUs and 4 more.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SuiteCrearUs.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SuitePositivos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SuiteResetPassAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Suite_All_Negativos and 2 more.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Suite_All_Negativos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Suite_All_Positivos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Suite_CrearUs_Positivos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Suite_CreateUser_Positivos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestForm.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.cesAdmin in automated-framework.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.tatf.adminCes.suites in automated-framework.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in automated-framework.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.suite1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.suites in automated-framework.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.automated-framework [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.automated-framework [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.automated-framework [test].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sil/IdeaProjects/tatf-adminCes/src/test/java&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-generacion-scripts-1\tatf-generacion-scripts-1\automation-framework\src\test\java\com\tatf\cesAdmin\deletUs" />
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-generacion-scripts-1\tatf-generacion-scripts-1\automation-framework\src\test\java\com\tatf\cesAdmin\viewUs" />
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-generacion-scripts-1\tatf-generacion-scripts-1\automation-framework\src\test\java\com\tatf\cesAdmin\resetPassAdmin" />
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-generacion-scripts-1\tatf-generacion-scripts-1\automation-framework\src\test\java\com\tatf\cesAdmin\login" />
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-generacion-scripts-1\tatf-generacion-scripts-1\automation-framework\src\test\java\com\tatf\cesAdmin\home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-adminCes" />
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-adminCes\src" />
+      <recent name="C:\Users\Sil\IdeaProjects\tatf-adminCes\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ResetPassAdminTest.resetUsNoExiste">
+    <configuration name="ResetPassAdminTest.resetUsNoExiste" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automated-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tatf.adminCes.resetPassAdmin.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tatf.adminCes.resetPassAdmin.test" />
+      <option name="MAIN_CLASS_NAME" value="com.tatf.adminCes.resetPassAdmin.test.ResetPassAdminTest" />
+      <option name="METHOD_NAME" value="resetUsNoExiste" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Suite_All_Positivos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automated-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tatf.adminCes.suites.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tatf.adminCes.suites" />
+      <option name="MAIN_CLASS_NAME" value="com.tatf.adminCes.suites.Suite_All_Positivos" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Suite_CreateUser_Positivos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automated-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tatf.adminCes.suites.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tatf.adminCes.suites" />
+      <option name="MAIN_CLASS_NAME" value="com.tatf.adminCes.suites.Suite_CreateUser_Positivos" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.tatf.adminCes.suites in automated-framework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automated-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tatf.adminCes.suites.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tatf.adminCes.suites" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="suites in automated-framework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="automated-framework" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/tatf/adminCes/suites" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="automation-framework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="automation-framework" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ResetPassAdminTest.resetUsNoExiste" />
+        <item itemvalue="JUnit.suites in automated-framework" />
+        <item itemvalue="JUnit.com.tatf.adminCes.suites in automated-framework" />
+        <item itemvalue="JUnit.Suite_All_Positivos" />
+        <item itemvalue="JUnit.Suite_CreateUser_Positivos" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aeee7eb9-6309-484b-b8e3-ab896baa63b5" name="Changes" comment="" />
+      <created>1789686448360</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789686448360</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/tatf/adminCes/AuxFun.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tatf/core/find/Find.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

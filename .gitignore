@@ -36,3 +36,15 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Allure
+.allure/
+allure-results/
+allure-report/
+
+# IntelliJ
+.idea/
+
+# Volcados de la JVM
+hs_err_pid*.log
+replay_pid*.log
