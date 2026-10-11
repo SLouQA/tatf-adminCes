@@ -162,4 +162,4 @@ mvn allure:serve
 
 Como `clean` borra la carpeta `target`, conviene generar el reporte de una corrida antes de ejecutar la siguiente.
 
-El resumen de resultados en Chrome y Edge está en el **Informe de Ejecución de Pruebas**.
+El resumen de resultados en Chrome y Edge está en el **Informe de Ejecución de Pruebas ([Informe finl_tatf_SLoureiro.pdf]())**.
