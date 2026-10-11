@@ -1,27 +1,18 @@
 package com.tatf.adminCes.resetPassAdmin.pom;
 
+import com.tatf.adminCes.base.pom.BasePO;
 import com.tatf.core.browser.IBrowser;
 
-public class ResetPassAdminPO {
-    private final IBrowser browser;
+public class ResetPassAdminPO extends BasePO {
+
+    private static final String LINK_REINICIAR_CONTRASENIA="Reiniciar contraseña";
+    private static final String BTN_RESET="btnReset";
 
     public ResetPassAdminPO(IBrowser browser) {
-        this.browser = browser;
+        super(browser);
     }
 
-    public void ingresarResetPassAdmin(){this.browser.find().link("Reiniciar contraseña").click();}
+    public void ingresarResetPassAdmin(){this.browser.find().link(LINK_REINICIAR_CONTRASENIA).click();}
 
-    public void ingresarEmail(String email){this.browser.find().name("inputEmail").write(email);}
-
-    public void ingresarContrasenia(String contrasenia){this.browser.find().name("inputPassword").write(contrasenia);}
-
-    public void ingresarRepeatContrasenia(String contrasenia){this.browser.find().name("inputRepeatPassword").write(contrasenia);}
-
-    public void btnReset(){this.browser.find().id("btnReset").click();}
-
-    public void btnInicSesClick(){this.browser.find().link("Ya tengo cuenta!").click();}
-
-    public void btnCreateAdminClick(){this.browser.find().link("Crear cuenta!").click();}
-
-    public void btnRetClick(){this.browser.find().id("return").click();}
+    public void btnReset(){this.browser.find().id(BTN_RESET).click();}
 }

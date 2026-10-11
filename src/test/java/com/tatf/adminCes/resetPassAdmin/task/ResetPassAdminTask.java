@@ -3,8 +3,8 @@ package com.tatf.adminCes.resetPassAdmin.task;
 import com.tatf.adminCes.resetPassAdmin.pom.ResetPassAdminPO;
 import com.tatf.core.browser.IBrowser;
 
-
 public class ResetPassAdminTask {
+
     private final ResetPassAdminPO resetPassAdminPO;
 
     public ResetPassAdminTask(IBrowser browser) {

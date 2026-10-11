@@ -1,4 +1,4 @@
-nombre;apellido;email;rol;validEmail;validRol
-Jeniffer;Mello;jeniffer@gmail.com;Tester Junior;jeniffer@gmail.com;Tester Junior
-Nahuel;Torena;nahuel@gmail.com;Tester Senior;nahuel@gmail.com;Tester Senior
-Dardo;Deleon;dardo@gmail.com;Tester Líder;dardo@gmail.com;Tester Líder
+nombre;apellido;email;rol
+Jeniffer;Mello;jeniffer@gmail.com;Tester Junior
+Nahuel;Torena;nahuel@gmail.com;Tester Senior
+Dardo;Deleon;dardo@gmail.com;Tester Líder
