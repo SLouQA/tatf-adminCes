@@ -7,6 +7,7 @@ import com.tatf.adminCes.login.task.LoguinTask;
 
 import com.tatf.adminCes.viewUs.task.ViewUsTask;
 import com.tatf.core.element.Element;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -21,6 +22,7 @@ public class DeletUsTest extends BaseTest {
             useHeadersInDisplayName = true,
             delimiter = ';'
     )
+    @Tag("positivo")
     void eliminarCuentaTester(String nombre, String apellido, String email,String rol,String validEmail, String validRol) {
         LoguinTask loguinTask = new LoguinTask(browser);
         ViewUsTask viewUsTask = new ViewUsTask(browser);

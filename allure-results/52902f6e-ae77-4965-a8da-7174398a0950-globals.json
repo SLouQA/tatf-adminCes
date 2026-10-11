@@ -1,0 +1,1 @@
+{"attachments":[],"errors":[{"known":false,"muted":false,"flaky":false,"message":"Container suite1 failed, tests inside it did not run: Suite [com.tatf.adminCes.suite1] did not discover any tests","trace":"org.junit.platform.suite.engine.NoTestsDiscoveredException: Suite [com.tatf.adminCes.suite1] did not discover any tests\r\n","timestamp":1791500985167}]}
